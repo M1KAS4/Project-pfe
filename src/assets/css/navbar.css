@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Inter:wght@400;600;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Habibi", sans-serif;
+}
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+ }
+ 
+ .cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+ }
+ 
+ .cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+ }
+ 
+ .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+ }
+ 
+ .cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+ }
+ 
+ .cta:hover svg {
+  transform: translateX(0);
+ }
+ 
+ .cta:active {
+  transform: scale(0.95);
+ }
+
+li {
+  list-style: none;
+}
+
+a{
+   text-decoration: none;
+}
+
+.navbar {
+  height: 15vh;
+  line-height: 10vh;
+  box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  display: block;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+
+.nav-li  {
+  color: #8ABE53;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.nav-links .link {
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.hero h1 {
+  text-align: center;
+  font-size: 80px;
+}
+
+.btn {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: #8ABE53;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+ }
+ 
+ .btn:hover {
+  color: #FFFFFF;
+ }
+ 
+ .btn:after {
+  content: "";
+  background: #398378;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+ }
+ 
+ .btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+ }
+
+.signup-li {
+  font-size: 15px;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.btn-mobile {
+  border: none;
+  background: 20px;
+  font-size: 20px;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+@media (max-width: 786px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+    left: 0;
+    top: 10%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background-color: white;
+  }
+
+  ul li {
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+
+  .mobile-menu-icon{
+   position: absolute;
+   display: block;
+   right: 20px;
+  }
+
+  .hero h1 {
+   font-size: 50px;
+  }
+}
